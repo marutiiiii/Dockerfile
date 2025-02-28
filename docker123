@@ -78,3 +78,263 @@ git merge hotfix-branch
 git push origin main
 
 git checkout feature-branch
+
+
+
+
+
+
+
+
+
+
+
+GitHub Repository Management & Collaboration on Ubuntu
+This guide provides step-by-step instructions for managing GitHub repositories and collaborating with teammates on Ubuntu.
+
+33. Creating a GitHub Repository and Sharing It with a Teammate
+Steps:
+1. Create a New Repository on GitHub
+Go to GitHub → Click New Repository.
+Enter repository name and description.
+Select Public (for open collaboration) or Private (for restricted access).
+Click Create Repository.
+2. Clone the Repository Locally
+Open the terminal and run:
+
+
+git clone git@github.com:your-username/repository-name.git
+cd repository-name
+3. Add Teammates as Collaborators
+Go to GitHub Repository → Settings → Collaborators & Teams.
+Click Add people, enter their GitHub username/email, and select a role:
+Write → Allows pushing commits.
+Admin → Full repository control.
+Click Invite.
+4. Teammate Accepts the Invite
+The collaborator will receive an email invitation.
+Once accepted, they can push code to the repository.
+34. Creating a GitHub Repository with README.md and .gitignore for Java
+Steps:
+1. Create a Repository on GitHub
+Go to GitHub → New Repository.
+Enter repository name and description.
+Check ✅ Add a README file (to initialize the repository).
+Check ✅ Add .gitignore → Select Java from the dropdown.
+Click Create Repository.
+2. Clone the Repository Locally
+
+git clone git@github.com:your-username/repository-name.git
+cd repository-name
+3. Verify Files
+
+ls
+You should see README.md and .gitignore.
+
+35. Hosting a New Project on GitHub with a License and Branch Protection
+Steps:
+1. Create a New Repository on GitHub
+Go to GitHub → New Repository.
+Enter repository name and description.
+Check ✅ Add a README.md.
+Check ✅ Add a License → Choose an open-source license like MIT.
+Click Create Repository.
+2. Clone the Repository Locally
+
+git clone git@github.com:your-username/repository-name.git
+cd repository-name
+3. Enable Branch Protection Rules
+Go to Repository → Settings → Branches → Branch protection rules.
+Click Add Rule and configure:
+✅ Require Pull Requests (PRs) before merging.
+✅ Require at least one approval before merging.
+✅ Prevent force pushes.
+✅ Prevent deletion of the main branch.
+Click Save Changes.
+36. Inviting an External Developer and Managing Access
+Steps:
+1. Add the External Developer as a Collaborator
+Go to GitHub → Repository → Settings → Collaborators & Teams.
+Click Add People, enter their GitHub username/email, and choose an access level:
+Read → View-only access.
+Write → Can push commits.
+Admin → Full repository control.
+Click Send Invitation.
+2. External Developer Accepts the Invitation
+The developer will receive an email invitation.
+Once accepted, they can clone and contribute to the repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GitHub Repository Management & Collaboration on Ubuntu
+Here’s a step-by-step guide for managing repositories and collaboration on Ubuntu.
+
+33. Creating a GitHub Repository and Sharing It with a Teammate
+Steps:
+1. Create a New Repository on GitHub
+Go to GitHub → Click New Repository.
+Enter a repository name and description.
+Choose Public (open collaboration) or Private (restricted access).
+Click Create Repository.
+2. Clone the Repository Locally
+Open the terminal and run:
+
+
+git clone git@github.com:your-username/repository-name.git
+cd repository-name
+3. Add Teammates as Collaborators
+Go to GitHub Repository → Settings → Collaborators & Teams.
+Click Add people, enter their GitHub username/email, and select a role:
+Write → Allows pushing commits.
+Admin → Full repository control.
+Click Invite.
+4. Teammate Accepts the Invite
+The collaborator will receive an email invitation.
+Once accepted, they can push code to the repository.
+34. Creating a GitHub Repository with README.md and .gitignore for Java
+Steps:
+1. Create a Repository on GitHub
+Go to GitHub → New Repository.
+Enter repository name and description.
+Check ✅ Add a README file (to initialize the repository).
+Check ✅ Add .gitignore → Select Java from the dropdown.
+Click Create Repository.
+2. Clone the Repository Locally
+
+git clone git@github.com:your-username/repository-name.git
+cd repository-name
+3. Verify Files
+
+ls
+You should see README.md and .gitignore.
+
+35. Hosting a New Project on GitHub with a License and Branch Protection
+Steps:
+1. Create a New Repository on GitHub
+Go to GitHub → New Repository.
+Enter repository name and description.
+Check ✅ Add a README.md.
+Check ✅ Add a License → Choose an open-source license like MIT.
+Click Create Repository.
+2. Clone the Repository Locally
+
+git clone git@github.com:your-username/repository-name.git
+cd repository-name
+3. Enable Branch Protection Rules
+Go to Repository → Settings → Branches → Branch protection rules.
+Click Add Rule and configure:
+✅ Require Pull Requests (PRs) before merging.
+✅ Require at least one approval before merging.
+✅ Prevent force pushes.
+✅ Prevent deletion of the main branch.
+Click Save Changes.
+36. Inviting an External Developer and Managing Access
+Steps:
+1. Add the External Developer as a Collaborator
+Go to GitHub → Repository → Settings → Collaborators & Teams.
+Click Add People, enter their GitHub username/email, and choose an access level:
+Read → View-only access.
+Write → Can push commits.
+Admin → Full repository control.
+Click Send Invitation.
+2. External Developer Accepts the Invitation
+The developer will receive an email invitation.
+Once accepted, they can clone and contribute to the repository.
+
+
+
+
+
+
+
+
+
+Git Pull, Merge & Conflict Resolution on Ubuntu (Simple Guide)
+37. Pull Updates from GitHub Without Losing Your Work
+Steps:
+1. Go to Your Project Folder
+
+cd /path/to/your/project
+2. Check Which Branch You Are On
+
+git branch
+(Make sure you’re on the correct branch, e.g., main or feature-branch.)
+
+3. Stash Your Local Changes (If Any)
+
+git stash
+(This saves your unfinished work temporarily.)
+
+4. Pull the Latest Updates
+
+git pull origin main
+5. Apply Your Stashed Changes
+
+git stash pop
+(Now your local changes are back.)
+
+6. If Everything Looks Good, Commit Your Changes
+
+git add .
+git commit -m "Merged latest updates from main"
+38. Pulling Changes & Handling Merge Conflicts
+Steps:
+1. Pull Changes from GitHub
+
+git pull origin main
+(Git will try to merge automatically.)
+
+2. If There Are Conflicts, Git Will Show a Message
+Example:
+
+
+CONFLICT (content): Merge conflict in file.txt
+3. Open the Conflicted File and Fix the Issue
+Git marks conflicts with:
+markdown
+
+<<<<<<< HEAD
+(Your version)
+=======
+(Their version)
+>>>>>>> origin/main
+Keep the correct version and delete the conflict markers.
+Save the file.
+4. Mark Conflict as Resolved and Commit
+
+
+git add .
+git commit -m "Resolved merge conflicts"
+git push origin main
+39. Pulling Updates from Main into Your Feature Branch
+Steps:
+1. Switch to Your Feature Branch
+nginx
+
+git checkout feature-branch
+2. Pull the Latest Changes from Main
+
+git pull origin main --rebase
+(This applies your changes on top of the latest main branch updates, reducing conflicts.)
+
+3. If There Are Conflicts, Fix Them as in Step 38
+(Manually edit the file, remove conflict markers, and save.)
+
+4. Continue the Rebase
+kotlin
+
+git rebase --continue
+5. Push Your Updated Feature Branch
+
+git push origin feature-branch --force
